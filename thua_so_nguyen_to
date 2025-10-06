@@ -1,0 +1,12 @@
+import math
+
+def factorize(n):
+    for i in range(2, int(math.sqrt(n)) + 1):
+        # Nếu n chia hết cho i, thì i là thừa số nguyên tố
+        while n % i == 0:
+            print(i, end=" ")
+            n //= i  # giảm n
+    if n > 1:
+        print(n, end="")
+
+factorize(60)
