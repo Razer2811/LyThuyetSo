@@ -1,0 +1,14 @@
+import math
+
+def cp(n):
+    can = int(math.sqrt(n))
+    if can * can == n:
+        return True  # dung
+    else:
+        return False  # sai
+
+import math
+
+n = 30
+for i in range(1, int(math.sqrt(n)) + 1):
+    print(i * i, end=" ")
