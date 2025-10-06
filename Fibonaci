@@ -1,0 +1,15 @@
+def fibo(n):
+    if n == 0 or n == 1:
+        return True
+    fn1, fn2 = 1, 0
+    for _ in range(2, 93):  # Giới hạn để tránh tràn số như trong C
+        fn = fn1 + fn2
+        if fn == n:
+            return True
+        fn2, fn1 = fn1, fn
+    return False
+
+n = 1000
+for i in range(n + 1):
+    if fibo(i):
+        print(i, end=" ")
