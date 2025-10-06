@@ -1,0 +1,16 @@
+import math
+def sont(n):
+   if(n<2):
+       return 0
+   for i in range(2,int(math.sqrt(n)+1)):
+       if n%i==0 :
+           return 0
+   return 1
+
+
+n = int(input("Nhap vao so n: "))
+
+
+for i in range(1,n+1):
+   if sont(i) == 1 :
+       print(i)
