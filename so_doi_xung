@@ -1,0 +1,15 @@
+def thuan_nghich(n):
+    m = 0
+    tmp = n
+    while n != 0:
+        m = m * 10 + n % 10  # đảo số
+        n //= 10
+    if tmp == m:
+        return True
+    return False
+
+n = 12321
+if thuan_nghich(n):
+    print("YES")
+else:
+    print("NO")
